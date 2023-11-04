@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class selenideSearchTest {
+public class SelenideSearchTest {
     @BeforeEach
     void setUp() {
         Configuration.baseUrl = "https://github.com";
