@@ -22,6 +22,18 @@ public class SelenideSearchTest {
         // - Убедитесь, что в списке страниц (Pages) есть страница SoftAssertions
         $("button.js-wiki-more-pages-link").click();
         $(byText("SoftAssertions")).click();
+        $$("div.highlight").get(4).shouldHave(text("@ExtendWith({SoftAssertsExtension.class}) " +
+                "class Tests { " +
+                "  @Test " +
+                "  void test() { " +
+                "    Configuration.assertionMode = SOFT; " +
+                "    open(\"page.html\"); " +
+                " " +
+                "    $(\"#first\").should(visible).click(); " +
+                "    $(\"#second\").should(visible).click(); " +
+                "  } " +
+                "}"));
+
 
 
     }
